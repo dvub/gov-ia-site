@@ -15,7 +15,7 @@ import { Button } from './ui/button';
 import { InstagramIcon } from 'lucide-react';
 export default function NavBar() {
 	return (
-		<>
+		<div className='p-5'>
 			<NavigationMenu className='justify-between'>
 				<NavigationMenuList>
 					{/* title of the website */}
@@ -38,19 +38,27 @@ export default function NavBar() {
 					<NavigationMenuItem>
 						<NavigationMenuTrigger>Learn</NavigationMenuTrigger>
 						<NavigationMenuContent>
-							<p>hi</p>
+							<ul></ul>
 						</NavigationMenuContent>
 					</NavigationMenuItem>
 
 					{/* 
                     item linking to an about page
-                */}
-
+                	*/}
+					<NavigationMenuItem>
+						<Link href='/about' legacyBehavior passHref>
+							<NavigationMenuLink
+								className={navigationMenuTriggerStyle()}
+							>
+								About
+							</NavigationMenuLink>
+						</Link>
+					</NavigationMenuItem>
 					{/* 
                     item linking to some contact information    
                 */}
 				</NavigationMenuList>
-				<NavigationMenuList className='flex items-center'>
+				<NavigationMenuList>
 					<NavigationMenuItem>
 						<Link href='https://www.youtube.com'>
 							<Button variant='outline' size='icon'>
@@ -63,6 +71,6 @@ export default function NavBar() {
 					</NavigationMenuItem>
 				</NavigationMenuList>
 			</NavigationMenu>
-		</>
+		</div>
 	);
 }
