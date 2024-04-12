@@ -22,8 +22,8 @@ export default function NavBar() {
 
 					<NavigationMenuItem>
 						<Link href='/'>
-							<NavigationMenuLink className='text-xl font-extrabold'>
-								opa
+							<NavigationMenuLink className='bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent font-bold text-3xl'>
+								opa.
 							</NavigationMenuLink>
 						</Link>
 					</NavigationMenuItem>
@@ -50,16 +50,18 @@ export default function NavBar() {
                     item linking to some contact information    
                 */}
 				</NavigationMenuList>
-				<div className='flex items-center gap-5'>
+				<NavigationMenuList className='flex items-center'>
 					<NavigationMenuItem>
-						<Link href='/'>
+						<Link href='https://www.youtube.com'>
 							<Button variant='outline' size='icon'>
 								<InstagramIcon />
 							</Button>
 						</Link>
 					</NavigationMenuItem>
-					<ModeToggle />
-				</div>
+					<NavigationMenuItem>
+						<ModeToggle />
+					</NavigationMenuItem>
+				</NavigationMenuList>
 			</NavigationMenu>
 		</>
 	);
