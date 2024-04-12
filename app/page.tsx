@@ -3,27 +3,43 @@ import NavBar from '@/components/navbar';
 
 export default function Home() {
 	return (
-		<main className='p-5 w-screen'>
-			<div className='flex justify-center'>
+		<main>
+			<div>
 				<div>
-					<h1 className=' my-5 bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent font-bold text-4xl'>
-						Online Privacy Awareness
-					</h1>
-					<p className='text-xl max-w-[75%]'>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore
-						magna aliqua. Eget nunc scelerisque viverra mauris in
-						aliquam sem. Euismod in pellentesque massa placerat duis
-						ultricies lacus. Vitae et leo duis ut diam quam. Nunc
-						consequat interdum varius sit amet mattis vulputate enim
-						nulla. Facilisis gravida neque convallis a. Sagittis eu
-						volutpat odio facilisis mauris sit amet massa vitae. Mi
-						in nulla posuere sollicitudin aliquam ultrices sagittis
-						orci a. Arcu vitae elementum curabitur vitae nunc sed
-						velit dignissim sodales. Non nisi est sit amet. Leo a
-						diam sollicitudin tempor id eu nisl. Quis eleifend quam
-						adipiscing vitae. Sit amet porttitor eget dolor morbi.
-					</p>
+					<div className='my-5'>
+						<h1 className='bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent font-bold text-4xl '>
+							Online Privacy Awareness
+						</h1>
+						{/* TODO: possible subheader here */}
+					</div>
+					<div className='text-xl max-w-[75%]'>
+						<p>
+							This project aims to spread awareness on the many
+							issues of online privacy and personal data in the
+							digital age. Furthermore, (for American readers)
+							this project seeks to educate people on online
+							privacy in relation to the Fourth Amendment, such as
+							how the government has been and is currently able to
+							access your data, as well as the constitutionality
+							of these methods.
+							<b>
+								The goal of this project is to encourage as many
+								as possible to not only be more mindful of their
+								online activity and digital footprint, but also
+								to choose privacy-focused tech alternatives.
+							</b>{' '}
+							We wish to achieve these goals in a free,
+							accessible, and open-source way. If you wish to
+							contribute to this project, see this page (todo).
+						</p>
+						{/* is this needed? 
+						<p className='my-3'>
+							This project is not encouraging online privacy to
+							promote illegal activity; there is a difference
+							between privacy and secrecy.
+						</p>
+						*/}
+					</div>
 				</div>
 			</div>
 		</main>
