@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<body className={inter.className}>
+			<body className={`${inter.className} mx-[5vw]`}>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='system'
@@ -22,7 +22,7 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					<NavBar />
-					<div className='MAIN_CONTENT my-12 mx-20'>{children}</div>
+					<div className='MAIN_CONTENT my-12'>{children}</div>
 				</ThemeProvider>
 			</body>
 		</html>

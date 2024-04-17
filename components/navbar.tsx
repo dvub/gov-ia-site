@@ -42,7 +42,7 @@ export default function NavBar() {
 		},
 	];
 	return (
-		<div className='p-5'>
+		<div className='my-5'>
 			<NavigationMenu className='justify-between'>
 				<NavigationMenuList>
 					{/* title of the website */}
