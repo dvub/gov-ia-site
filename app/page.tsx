@@ -1,5 +1,7 @@
 'use client';
 import NavBar from '@/components/navbar';
+import { Button } from '@/components/ui/button';
+import { ChevronDown } from 'lucide-react';
 import { BrowserView, isMobile, MobileView } from 'react-device-detect';
 
 export default function Home() {
@@ -7,7 +9,7 @@ export default function Home() {
 		<main>
 			<div>
 				<div>
-					<div className='my-5'>
+					<div className='my-12'>
 						<h1 className='bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent font-bold text-4xl '>
 							Online Privacy Awareness
 						</h1>
@@ -15,10 +17,25 @@ export default function Home() {
 					</div>
 					<div className='text-xl max-w-[90%]'>
 						{isMobile && (
-							<p>
-								Spreading awareness on the many issues of online
-								privacy and personal data in the digital age.
-							</p>
+							<>
+								<p>
+									Spreading awareness on the many issues of
+									online privacy and personal data in the
+									digital age.
+								</p>
+								<div className='BUTTON-WRAPPER flex justify-center'>
+									<Button
+										variant='outline'
+										className='my-5'
+										size='lg'
+										onClick={() => {
+											console.log('hi :)');
+										}}
+									>
+										More <ChevronDown className='w-3 h-3' />
+									</Button>
+								</div>
+							</>
 						)}
 						{!isMobile && (
 							<p>
