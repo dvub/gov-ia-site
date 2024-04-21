@@ -64,18 +64,34 @@ export default function NavBar() {
 
 					<NavigationMenuItem>
 						<NavigationMenuTrigger>Learn</NavigationMenuTrigger>
+
 						<NavigationMenuContent>
-							<ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
-								{components.map((component) => (
-									<ListItem
-										key={component.title}
-										title={component.title}
-										href={component.href}
+							<div className='p-4 w-[400px] md:w-[500px] lg:w-[600px] '>
+								<NavigationMenuLink asChild>
+									<Link
+										className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
+										href='/articles'
 									>
-										{component.description}
-									</ListItem>
-								))}
-							</ul>
+										<div className='mb-2 mt-4 text-lg font-medium'>
+											See All Articles
+										</div>
+									</Link>
+								</NavigationMenuLink>
+								<h1 className='py-4 w-full text-center text-xl'>
+									Quick Links
+								</h1>
+								<ul className='grid gap-3 md:grid-cols-2'>
+									{components.map((component) => (
+										<ListItem
+											key={component.title}
+											title={component.title}
+											href={component.href}
+										>
+											{component.description}
+										</ListItem>
+									))}
+								</ul>
+							</div>
 						</NavigationMenuContent>
 					</NavigationMenuItem>
 

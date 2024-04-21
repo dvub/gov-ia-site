@@ -30,9 +30,10 @@ export default function Home() {
 								in the digital age. Furthermore, (for American
 								readers) this project seeks to educate people on
 								online privacy in relation to the Fourth
-								Amendment, such as how the government has been
-								and is currently able to access your data, as
-								well as the constitutionality of these methods.
+								Amendment, such as how your government is
+								currently able to access and handle your data,
+								as well as the constitutionality of these
+								methods.
 							</p>
 						)}
 						<div className='BUTTON-WRAPPER flex justify-center'>
