@@ -1,3 +1,4 @@
+'use client';
 import {
 	NavigationMenu,
 	NavigationMenuContent,
@@ -15,7 +16,8 @@ import { Button } from './ui/button';
 import { InstagramIcon } from 'lucide-react';
 import React from 'react';
 import { cn } from '@/lib/utils';
-export default function NavBar() {
+
+export default function NavBar(props: { articles: { title: string }[] }) {
 	const components: { title: string; href: string; description: string }[] = [
 		{
 			title: 'Why You Should Care about Online Privacy',

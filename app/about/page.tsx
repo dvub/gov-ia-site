@@ -10,7 +10,7 @@ export default function Page() {
 			<div className='text-xl lg:max-w-[50%] md:max-w-[75%] max-w-[90%]'>
 				<p className='my-3'>
 					Online Privacy Awareness is a project started by 2 students
-					for a goverment class.
+					for our goverment class. We're Casey and Kaya, by the way.
 				</p>
 				<p className='my-3'>
 					This project aims to spread awareness on the many issues of
@@ -25,10 +25,9 @@ export default function Page() {
 					<b>
 						The goal of this project is to encourage as many as
 						possible to not only be more mindful of their online
-						activity and digital footprint, but also to choose
-						privacy-focused tech alternatives.
+						activity and privacy but also to choose privacy-focused
+						tech alternatives.
 					</b>{' '}
-					We wish to achieve these goals in a free and accessible way.
 				</p>
 			</div>
 		</main>
