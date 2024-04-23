@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import ThemeProvider from '@/components/theme-provider';
 import NavBar from '@/components/navbar';
-
+import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
@@ -14,6 +14,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en' suppressHydrationWarning>
+			<Analytics />
 			<body className={`${inter.className} mx-[5vw]`}>
 				<ThemeProvider
 					attribute='class'
