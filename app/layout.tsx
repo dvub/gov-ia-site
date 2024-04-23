@@ -5,6 +5,8 @@ import './globals.css';
 import ThemeProvider from '@/components/theme-provider';
 import NavBar from '@/components/navbar';
 import { Analytics } from '@vercel/analytics/react';
+import Footer from '@/components/footer/footer';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
@@ -12,10 +14,13 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	// https://stackoverflow.com/questions/59812003/tailwindcss-fixed-sticky-footer-on-the-bottom
 	return (
 		<html lang='en' suppressHydrationWarning>
 			<Analytics />
-			<body className={`${inter.className} mx-[5vw]`}>
+			<body
+				className={`${inter.className} mx-[5vw] flex flex-col h-screen`}
+			>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='system'
@@ -23,7 +28,10 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					<NavBar />
-					<div className='MAIN_CONTENT my-12 text-xl'>{children}</div>
+					<div className='MAIN_CONTENT text-xl mt-12 mb-52'>
+						{children}
+					</div>
+					<Footer />
 				</ThemeProvider>
 			</body>
 		</html>
