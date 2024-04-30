@@ -18,6 +18,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 
 export default function NavBar(props: { articles: { title: string }[] }) {
+	/*
 	const components: { title: string; href: string; description: string }[] = [
 		{
 			title: 'Why You Should Care about Online Privacy',
@@ -43,6 +44,7 @@ export default function NavBar(props: { articles: { title: string }[] }) {
 				'How you can become involved with legislators on making change.',
 		},
 	];
+	*/
 	return (
 		<div className='my-5'>
 			<NavigationMenu className='justify-between'>
@@ -69,6 +71,7 @@ export default function NavBar(props: { articles: { title: string }[] }) {
 
 						<NavigationMenuContent>
 							<div className='p-4 w-[400px] md:w-[500px] lg:w-[600px] '>
+								{/*
 								<NavigationMenuLink asChild>
 									<Link
 										className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
@@ -79,10 +82,12 @@ export default function NavBar(props: { articles: { title: string }[] }) {
 										</div>
 									</Link>
 								</NavigationMenuLink>
+			*/}
 								<h1 className='py-4 w-full text-center text-xl'>
 									Quick Links
 								</h1>
 								<ul className='grid gap-3 md:grid-cols-2'>
+									{/*
 									{components.map((component) => (
 										<ListItem
 											key={component.title}
@@ -92,6 +97,16 @@ export default function NavBar(props: { articles: { title: string }[] }) {
 											{component.description}
 										</ListItem>
 									))}
+								*/}
+									<ListItem
+										title={'What is Online Privacy?'}
+										href={
+											'/articles/pages/what-is-online-privacy'
+										}
+									>
+										Learn about the basics of online
+										privacy.
+									</ListItem>
 								</ul>
 							</div>
 						</NavigationMenuContent>
