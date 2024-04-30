@@ -12,7 +12,7 @@ export default function Footer() {
 
 			<div className='my-5 flex gap-5'>
 				<Button variant='outline' size='icon' className=''>
-					<Link href='TODO'>
+					<Link href='https://github.com/dvub/gov-ia-site'>
 						<Github />
 					</Link>
 				</Button>
