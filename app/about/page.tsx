@@ -1,3 +1,5 @@
+import { readdirSync } from 'fs';
+
 export default function Page() {
 	return (
 		<main>

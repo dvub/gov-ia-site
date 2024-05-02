@@ -18,9 +18,9 @@ export default function Footer() {
 				</Button>
 				<p className='text-sm'>
 					We care about providing information in a free and accessible
-					way. Therefore, this project is open-source! (That means you
-					can see, or even request changes to the code of this
-					website)
+					way. To that end, we have made this project open-source!
+					(That means you can see, or even request changes to the code
+					of this website)
 				</p>
 			</div>
 			<PrivacyNote />

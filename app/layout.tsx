@@ -1,4 +1,3 @@
-'use client';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -8,14 +7,17 @@ import { Analytics } from '@vercel/analytics/react';
 import Footer from '@/components/footer/footer';
 //import { readdirSync } from 'fs';
 import { useState } from 'react';
+import { readdirSync } from 'fs';
+import { ArticleMetadata, fetchArticleMetadata } from '@/lib/types';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const metadatas = await fetchArticleMetadata();
 	// https://stackoverflow.com/questions/59812003/tailwindcss-fixed-sticky-footer-on-the-bottom
 	return (
 		<html lang='en' suppressHydrationWarning>
@@ -29,7 +31,7 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<NavBar articles={[{ title: 'hi! ' }]} />
+					<NavBar articles={metadatas} />
 					<div className='MAIN_CONTENT text-xl mt-12 mb-52'>
 						{children}
 					</div>
