@@ -11,8 +11,8 @@ import { fetchArticleMetadata } from '@/lib/types';
 import Link from 'next/link';
 
 export default async function Articles() {
+	// get our article metadata here
 	const metadatas = await fetchArticleMetadata();
-
 	return (
 		<>
 			<h1 className='text-3xl font-bold'>All Articles</h1>
@@ -34,10 +34,13 @@ export default async function Articles() {
 										{metadata.description}
 									</CardDescription>
 								</CardHeader>
+								{/* */}
 								<CardContent>
-									<div className='flex gap-3 my-3'>
-										{metadata.tags.map((tag) => {
-											return <Badge>{tag}</Badge>;
+									<div className=' flex gap-3 my-3'>
+										{metadata.tags.map((tag, index) => {
+											return (
+												<Badge key={index}>{tag}</Badge>
+											);
 										})}
 									</div>
 								</CardContent>
