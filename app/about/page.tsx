@@ -36,6 +36,9 @@ export default function Page() {
 						activity and privacy but also to choose privacy-focused
 						tech alternatives.
 					</b>{' '}
+					Beyond that, though, there's still a lot that can be done.
+					Consider contacting your legislators, or contributing to a
+					privacy project such as this one! Contributions are welcome.
 				</p>
 			</div>
 		</main>

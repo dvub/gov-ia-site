@@ -17,7 +17,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 		h2: ({ children }) => (
 			<h2 className='text-2xl my-5 font-bold'>{children}</h2>
 		),
-		ul: ({ children }) => <ul className='list-disc text-xs'>{children}</ul>,
+		ul: ({ children }) => (
+			<ul className='list-disc text-sm '>{children}</ul>
+		),
 
 		/*
 		a: ({ children, href }) => (
