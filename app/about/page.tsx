@@ -1,4 +1,10 @@
-import { readdirSync } from 'fs';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'About | OPA',
+	description:
+		'Online Privacy Awareness is a project started by 2 student for our goverment class. Learn more about the project here!',
+};
 
 export default function Page() {
 	return (

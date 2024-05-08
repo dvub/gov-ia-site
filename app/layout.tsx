@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import ThemeProvider from '@/components/theme-provider';
 import NavBar from '@/components/navbar';
 import { Analytics } from '@vercel/analytics/react';
 import Footer from '@/components/footer/footer';
-//import { readdirSync } from 'fs';
-import { useState } from 'react';
-import { readdirSync } from 'fs';
-import { ArticleMetadata, fetchArticleMetadata } from '@/lib/types';
+import { fetchArticleMetadata } from '@/lib/types';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+	title: 'Home | OPA',
+};
 const inter = Inter({ subsets: ['latin'] });
 
 export default async function RootLayout({

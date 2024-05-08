@@ -5,6 +5,7 @@ import { useLayoutEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 
 export default function Home() {
+	// this might not be needed at all
 	const [mobile, setMobile] = useState(false);
 	// possible optimization??
 	useLayoutEffect(() => {
